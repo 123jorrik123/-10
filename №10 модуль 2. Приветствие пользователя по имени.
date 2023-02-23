@@ -1,0 +1,25 @@
+from tkinter import *
+from tkinter import ttk
+ 
+ 
+def display():
+    label["text"] = entry.get()
+ 
+master = Tk()
+master.geometry("300x300")
+master.title("ПРИВЕТ")
+
+label = ttk.Label()
+label.pack(anchor=NW, padx=6, pady=6)
+ 
+entry = ttk.Entry()
+entry.pack(anchor=NW, padx=6, pady=6)
+ 
+
+entry.insert(0, "")
+ 
+display_button = ttk.Button(text="Приветствие", command=display)
+display_button.pack(side=LEFT, anchor=N, padx=6, pady=6)
+
+ 
+master.mainloop()
